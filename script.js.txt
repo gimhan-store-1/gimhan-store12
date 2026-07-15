@@ -1,0 +1,818 @@
+/* ======================================================
+   Gimhan Store
+   Main JavaScript
+   Part 1
+====================================================== */
+
+"use strict";
+
+/* ======================================================
+   DOM Ready
+====================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    initializeApp();
+
+});
+
+/* ======================================================
+   Initialize App
+====================================================== */
+
+function initializeApp() {
+
+    splashScreen();
+
+    onboardingScreen();
+
+}
+
+/* ======================================================
+   Splash Screen
+====================================================== */
+
+function splashScreen() {
+
+    const splash = document.getElementById("splash-screen");
+
+    if (!splash) return;
+
+    setTimeout(() => {
+
+        splash.classList.add("hide");
+
+    }, 2500);
+
+}
+
+/* ======================================================
+   Onboarding
+====================================================== */
+
+function onboardingScreen() {
+
+    const onboarding = document.getElementById("onboarding");
+
+    if (!onboarding) return;
+
+    const slides = onboarding.querySelectorAll(".slide");
+
+    const dots = onboarding.querySelectorAll(".onboarding-dots span");
+
+    const button = document.getElementById("getStarted");
+
+    let current = 0;
+
+    function showSlide(index) {
+
+        slides.forEach(slide => {
+
+            slide.classList.remove("active");
+
+        });
+
+        dots.forEach(dot => {
+
+            dot.classList.remove("active");
+
+        });
+
+        slides[index].classList.add("active");
+
+        if (dots[index]) {
+
+            dots[index].classList.add("active");
+
+        }
+
+    }
+
+    showSlide(current);
+
+    if (button) {
+
+        button.addEventListener("click", () => {
+
+            current++;
+
+            if (current >= slides.length) {
+
+                onboarding.classList.add("hide");
+
+                return;
+
+            }
+
+            showSlide(current);
+
+        });
+
+    }
+
+    dots.forEach((dot, index) => {
+
+        dot.addEventListener("click", () => {
+
+            current = index;
+
+            showSlide(current);
+
+        });
+
+    });
+
+}
+
+/* ======================================================
+   Helper Functions
+====================================================== */
+
+function $(selector) {
+
+    return document.querySelector(selector);
+
+}
+
+function $$(selector) {
+
+    return document.querySelectorAll(selector);
+
+}
+
+
+/* ======================================================
+   Gimhan Store
+   Main JavaScript
+   Part 2
+======================================================*/
+
+/* ======================================================
+   Mobile Menu
+======================================================*/
+
+const menuToggle = document.querySelector(".menu-toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+const menuOverlay = document.querySelector(".menu-overlay");
+const closeMenu = document.querySelector(".close-menu");
+
+function openMobileMenu() {
+
+    if (!mobileMenu) return;
+
+    mobileMenu.classList.add("active");
+
+    if (menuOverlay) {
+        menuOverlay.classList.add("active");
+    }
+
+    document.body.style.overflow = "hidden";
+
+}
+
+function closeMobileMenu() {
+
+    if (!mobileMenu) return;
+
+    mobileMenu.classList.remove("active");
+
+    if (menuOverlay) {
+        menuOverlay.classList.remove("active");
+    }
+
+    document.body.style.overflow = "";
+
+}
+
+if (menuToggle) {
+    menuToggle.addEventListener("click", openMobileMenu);
+}
+
+if (closeMenu) {
+    closeMenu.addEventListener("click", closeMobileMenu);
+}
+
+if (menuOverlay) {
+    menuOverlay.addEventListener("click", closeMobileMenu);
+}
+
+/* ======================================================
+   Sticky Header
+======================================================*/
+
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+
+    if (!header) return;
+
+    if (window.scrollY > 80) {
+
+        header.classList.add("scrolled");
+
+    } else {
+
+        header.classList.remove("scrolled");
+
+    }
+
+});
+
+/* ======================================================
+   Search Focus Animation
+======================================================*/
+
+const searchInput = document.querySelector(".search-box input");
+
+if (searchInput) {
+
+    searchInput.addEventListener("focus", () => {
+
+        searchInput.parentElement.classList.add("active");
+
+    });
+
+    searchInput.addEventListener("blur", () => {
+
+        searchInput.parentElement.classList.remove("active");
+
+    });
+
+}
+
+/* ======================================================
+   Scroll To Top Button
+======================================================*/
+
+const scrollTopBtn = document.getElementById("scrollTop");
+
+window.addEventListener("scroll", () => {
+
+    if (!scrollTopBtn) return;
+
+    if (window.scrollY > 400) {
+
+        scrollTopBtn.classList.add("show");
+
+    } else {
+
+        scrollTopBtn.classList.remove("show");
+
+    }
+
+});
+
+if (scrollTopBtn) {
+
+    scrollTopBtn.addEventListener("click", () => {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
+
+    });
+
+}
+
+/* ======================================================
+   Active Navigation
+======================================================*/
+
+const navLinks = document.querySelectorAll(".nav-menu a");
+
+navLinks.forEach(link => {
+
+    link.addEventListener("click", function () {
+
+        navLinks.forEach(item => {
+
+            item.classList.remove("active");
+
+        });
+
+        this.classList.add("active");
+
+    });
+
+});
+
+/* ======================================================
+   Window Resize
+======================================================*/
+
+window.addEventListener("resize", () => {
+
+    if (window.innerWidth > 768) {
+
+        closeMobileMenu();
+
+    }
+
+});
+
+/* ======================================================
+   Gimhan Store
+   Main JavaScript
+   Part 3A - Banner Slider
+====================================================== */
+
+/* ======================================================
+   Banner Slider
+====================================================== */
+
+const bannerSlider = document.querySelector(".banner-slider");
+const bannerSlides = document.querySelectorAll(".banner-slide");
+const bannerDots = document.querySelectorAll(".banner-dot");
+
+let currentBanner = 0;
+let bannerInterval = null;
+
+if (bannerSlides.length > 0) {
+
+    showBanner(currentBanner);
+
+    startBannerSlider();
+
+}
+
+/* ======================================================
+   Show Banner
+====================================================== */
+
+function showBanner(index) {
+
+    bannerSlides.forEach((slide) => {
+
+        slide.classList.remove("active");
+
+    });
+
+    bannerDots.forEach((dot) => {
+
+        dot.classList.remove("active");
+
+    });
+
+    bannerSlides[index].classList.add("active");
+
+    if (bannerDots[index]) {
+
+        bannerDots[index].classList.add("active");
+
+    }
+
+}
+
+/* ======================================================
+   Next Banner
+====================================================== */
+
+function nextBanner() {
+
+    currentBanner++;
+
+    if (currentBanner >= bannerSlides.length) {
+
+        currentBanner = 0;
+
+    }
+
+    showBanner(currentBanner);
+
+}
+
+/* ======================================================
+   Previous Banner
+====================================================== */
+
+function previousBanner() {
+
+    currentBanner--;
+
+    if (currentBanner < 0) {
+
+        currentBanner = bannerSlides.length - 1;
+
+    }
+
+    showBanner(currentBanner);
+
+}
+
+/* ======================================================
+   Auto Slider
+====================================================== */
+
+function startBannerSlider() {
+
+    stopBannerSlider();
+
+    bannerInterval = setInterval(() => {
+
+        nextBanner();
+
+    }, 5000);
+
+}
+
+/* ======================================================
+   Stop Auto Slider
+====================================================== */
+
+function stopBannerSlider() {
+
+    if (bannerInterval) {
+
+        clearInterval(bannerInterval);
+
+    }
+
+}
+
+/* ======================================================
+   Pause on Hover
+====================================================== */
+
+if (bannerSlider) {
+
+    bannerSlider.addEventListener("mouseenter", () => {
+
+        stopBannerSlider();
+
+    });
+
+    bannerSlider.addEventListener("mouseleave", () => {
+
+        startBannerSlider();
+
+    });
+
+}
+
+/* ======================================================
+   Gimhan Store
+   Main JavaScript
+   Part 3B - Banner Controls
+====================================================== */
+
+/* ======================================================
+   Banner Buttons
+====================================================== */
+
+const bannerNextBtn = document.querySelector(".banner-next");
+const bannerPrevBtn = document.querySelector(".banner-prev");
+
+/* Next Button */
+
+if (bannerNextBtn) {
+
+    bannerNextBtn.addEventListener("click", () => {
+
+        nextBanner();
+
+        startBannerSlider();
+
+    });
+
+}
+
+/* Previous Button */
+
+if (bannerPrevBtn) {
+
+    bannerPrevBtn.addEventListener("click", () => {
+
+        previousBanner();
+
+        startBannerSlider();
+
+    });
+
+}
+
+/* ======================================================
+   Banner Dots
+====================================================== */
+
+bannerDots.forEach((dot, index) => {
+
+    dot.addEventListener("click", () => {
+
+        currentBanner = index;
+
+        showBanner(currentBanner);
+
+        startBannerSlider();
+
+    });
+
+});
+
+/* ======================================================
+   Keyboard Navigation
+====================================================== */
+
+document.addEventListener("keydown", (event) => {
+
+    if (event.key === "ArrowRight") {
+
+        nextBanner();
+
+        startBannerSlider();
+
+    }
+
+    if (event.key === "ArrowLeft") {
+
+        previousBanner();
+
+        startBannerSlider();
+
+    }
+
+});
+
+/* ======================================================
+   Page Visibility
+====================================================== */
+
+document.addEventListener("visibilitychange", () => {
+
+    if (document.hidden) {
+
+        stopBannerSlider();
+
+    } else {
+
+        startBannerSlider();
+
+    }
+
+});
+
+/* ======================================================
+   Smooth Fade Animation
+====================================================== */
+
+function animateBanner() {
+
+    const activeSlide = bannerSlides[currentBanner];
+
+    if (!activeSlide) return;
+
+    activeSlide.classList.add("fade-in");
+
+    setTimeout(() => {
+
+        activeSlide.classList.remove("fade-in");
+
+    }, 600);
+
+}
+
+/* ======================================================
+   Update Banner
+====================================================== */
+
+const originalShowBanner = showBanner;
+
+showBanner = function (index) {
+
+    originalShowBanner(index);
+
+    animateBanner();
+
+};
+
+/* ======================================================
+   Gimhan Store
+   Main JavaScript
+   Part 3C - Touch Swipe & Category Slider
+======================================================*/
+
+/* ======================================================
+   Banner Touch Swipe
+======================================================*/
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+if (bannerSlider) {
+
+    bannerSlider.addEventListener("touchstart", (event) => {
+
+        touchStartX = event.changedTouches[0].screenX;
+
+    });
+
+    bannerSlider.addEventListener("touchend", (event) => {
+
+        touchEndX = event.changedTouches[0].screenX;
+
+        handleBannerSwipe();
+
+    });
+
+}
+
+function handleBannerSwipe() {
+
+    const distance = touchStartX - touchEndX;
+
+    if (Math.abs(distance) < 50) return;
+
+    if (distance > 0) {
+
+        nextBanner();
+
+    } else {
+
+        previousBanner();
+
+    }
+
+    startBannerSlider();
+
+}
+
+/* ======================================================
+   Mouse Drag Support
+======================================================*/
+
+let mouseDown = false;
+let mouseStartX = 0;
+let mouseEndX = 0;
+
+if (bannerSlider) {
+
+    bannerSlider.addEventListener("mousedown", (event) => {
+
+        mouseDown = true;
+
+        mouseStartX = event.clientX;
+
+    });
+
+    bannerSlider.addEventListener("mouseup", (event) => {
+
+        if (!mouseDown) return;
+
+        mouseEndX = event.clientX;
+
+        mouseDown = false;
+
+        const dragDistance = mouseStartX - mouseEndX;
+
+        if (Math.abs(dragDistance) < 50) return;
+
+        if (dragDistance > 0) {
+
+            nextBanner();
+
+        } else {
+
+            previousBanner();
+
+        }
+
+        startBannerSlider();
+
+    });
+
+    bannerSlider.addEventListener("mouseleave", () => {
+
+        mouseDown = false;
+
+    });
+
+}
+
+/* ======================================================
+   Category Slider
+======================================================*/
+
+const categoryWrapper = document.querySelector(".categories-wrapper");
+
+const categoryNext = document.querySelector(".category-next");
+
+const categoryPrev = document.querySelector(".category-prev");
+
+const categoryScrollAmount = 280;
+
+if (categoryNext && categoryWrapper) {
+
+    categoryNext.addEventListener("click", () => {
+
+        categoryWrapper.scrollBy({
+
+            left: categoryScrollAmount,
+
+            behavior: "smooth"
+
+        });
+
+    });
+
+}
+
+if (categoryPrev && categoryWrapper) {
+
+    categoryPrev.addEventListener("click", () => {
+
+        categoryWrapper.scrollBy({
+
+            left: -categoryScrollAmount,
+
+            behavior: "smooth"
+
+        });
+
+    });
+
+}
+
+/* ======================================================
+   Auto Scroll Categories
+======================================================*/
+
+let categoryAutoSlide = null;
+
+function startCategorySlider() {
+
+    if (!categoryWrapper) return;
+
+    stopCategorySlider();
+
+    categoryAutoSlide = setInterval(() => {
+
+        if (
+
+            categoryWrapper.scrollLeft + categoryWrapper.clientWidth >=
+
+            categoryWrapper.scrollWidth - 5
+
+        ) {
+
+            categoryWrapper.scrollTo({
+
+                left: 0,
+
+                behavior: "smooth"
+
+            });
+
+        } else {
+
+            categoryWrapper.scrollBy({
+
+                left: categoryScrollAmount,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    }, 4500);
+
+}
+
+function stopCategorySlider() {
+
+    clearInterval(categoryAutoSlide);
+
+}
+
+if (categoryWrapper) {
+
+    startCategorySlider();
+
+    categoryWrapper.addEventListener("mouseenter", stopCategorySlider);
+
+    categoryWrapper.addEventListener("mouseleave", startCategorySlider);
+
+}
+
+/* ======================================================
+   Performance
+======================================================*/
+
+window.addEventListener("blur", () => {
+
+    stopBannerSlider();
+
+    stopCategorySlider();
+
+});
+
+window.addEventListener("focus", () => {
+
+    startBannerSlider();
+
+    startCategorySlider();
+
+});

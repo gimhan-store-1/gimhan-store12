@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Gimhan Store</title>
+
+    <meta name="description"
+        content="Gimhan Store - Sri Lanka's Smart Online Shopping Platform">
+
+    <meta name="keywords"
+        content="Shopping,Ecommerce,Gimhan Store,Sri Lanka">
+
+    <meta name="author"
+        content="Gimhan Store">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- Splash Screen -->
+<!-- ========================= -->
+
+<div id="splash-screen">
+
+    <div class="splash-content">
+
+        <img src="assets/logo/logo.png"
+            class="logo"
+            alt="Gimhan Store">
+
+        <h1>Gimhan Store</h1>
+
+        <p>Everything You Need In One Place</p>
+
+        <div class="loader"></div>
+
+        <span>Version 1.0.0</span>
+
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- Onboarding -->
+<!-- ========================= -->
+
+<section id="onboarding">
+
+<div class="slide active">
+
+<img src="assets/images/onboard1.png">
+
+<h2>Welcome</h2>
+
+<p>
+Welcome to Gimhan Store.
+Buy anything anytime.
+</p>
+
+</div>
+
+<div class="slide">
+
+<img src="assets/images/onboard2.png">
+
+<h2>Discover Products</h2>
+
+<p>
+
+Explore thousands of quality products.
+
+</p>
+
+</div>
+
+<div class="slide">
+
+<img src="assets/images/onboard3.png">
+
+<h2>Fast Delivery</h2>
+
+<p>
+
+Quick island-wide delivery service.
+
+</p>
+
+</div>
+
+<div class="slide">
+
+<img src="assets/images/onboard4.png">
+
+<h2>Secure Payment</h2>
+
+<p>
+
+Safe and trusted payment methods.
+
+</p>
+
+</div>
+
+<button id="getStarted">
+
+Get Started
+
+</button>
+
+</section>
+
+<!-- ========================= -->
+<!-- Main Website -->
+<!-- ========================= -->
+
+<div id="main-site">
+
+<header>
+
+<div class="logo-area">
+
+<img src="assets/logo/logo.png"
+alt="Logo">
+
+<h2>Gimhan Store</h2>
+
+</div>
+
+<div class="search-box">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+placeholder="Search products...">
+
+</div>
+
+<div class="header-icons">
+
+<div class="icon">
+
+<i class="fa-regular fa-bell"></i>
+
+<span>3</span>
+
+</div>
+
+<div class="icon">
+
+<i class="fa-regular fa-message"></i>
+
+<span>5</span>
+
+</div>
+
+<div class="icon">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span>2</span>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- ========================= -->
+<!-- Navigation -->
+<!-- ========================= -->
+
+<nav>
+
+<ul>
+
+<li class="active">
+<a href="#">Home</a>
+</li>
+
+<li>
+<a href="#">Categories</a>
+</li>
+
+<li>
+<a href="#">Brands</a>
+</li>
+
+<li>
+<a href="#">Flash Sale</a>
+</li>
+
+<li>
+<a href="#">Mega Sale</a>
+</li>
+
+<li>
+<a href="#">Profile</a>
+</li>
+
+</ul>
+
+</nav>
+
+<!-- ========================= -->
+<!-- Home Content Starts -->
+<!-- ========================= -->
+
+<main>
+
+    <!-- ========================= -->
+    <!-- Hero Banner Slider -->
+    <!-- ========================= -->
+
+    <section class="hero-slider">
+
+        <div class="slide active">
+            <img src="assets/banners/banner1.jpg" alt="Banner 1">
+            <div class="banner-content">
+                <h1>Welcome to Gimhan Store</h1>
+                <p>Best Deals • Fast Delivery • Secure Shopping</p>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="assets/banners/banner2.jpg" alt="Banner 2">
+            <div class="banner-content">
+                <h1>Flash Sale</h1>
+                <p>Up to 70% OFF on Selected Products</p>
+                <a href="#" class="btn">View Offers</a>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="assets/banners/banner3.jpg" alt="Banner 3">
+            <div class="banner-content">
+                <h1>New Arrivals</h1>
+                <p>Latest Products Just For You</p>
+                <a href="#" class="btn">Explore</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- Services -->
+    <!-- ========================= -->
+
+    <section class="services">
+
+        <div class="service-card">
+            <i class="fa-solid fa-truck-fast"></i>
+            <h3>Fast Delivery</h3>
+            <p>Island-wide delivery.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Secure Payment</h3>
+            <p>100% Safe Checkout.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fa-solid fa-rotate-left"></i>
+            <h3>Easy Returns</h3>
+            <p>Simple return process.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fa-solid fa-headset"></i>
+            <h3>24/7 Support</h3>
+            <p>Always here to help.</p>
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- Categories -->
+    <!-- ========================= -->
+
+    <section class="categories">
+
+        <div class="section-title">
+            <h2>Shop by Category</h2>
+            <a href="#">View All</a>
+        </div>
+
+        <div class="category-grid">
+
+            <div class="category-card">
+                <img src="assets/categories/electronics.png" alt="">
+                <h4>Electronics</h4>
+            </div>
+
+            <div class="category-card">
+                <img src="assets/categories/fashion.png" alt="">
+                <h4>Fashion</h4>
+            </div>
+
+            <div class="category-card">
+                <img src="assets/categories/home.png" alt="">
+                <h4>Home</h4>
+            </div>
+
+            <div class="category-card">
+                <img src="assets/categories/beauty.png" alt="">
+                <h4>Beauty</h4>
+            </div>
+
+            <div class="category-card">
+                <img src="assets/categories/sports.png" alt="">
+                <h4>Sports</h4>
+            </div>
+
+            <div class="category-card">
+                <img src="assets/categories/toys.png" alt="">
+                <h4>Toys</h4>
+            </div>
+
+            <div class="category-card">
+                <img src="assets/categories/books.png" alt="">
+                <h4>Books</h4>
+            </div>
+
+            <div class="category-card">
+                <img src="assets/categories/grocery.png" alt="">
+                <h4>Groceries</h4>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- Popular Brands -->
+    <!-- ========================= -->
+
+    <section class="brands">
+
+        <div class="section-title">
+            <h2>Popular Brands</h2>
+            <a href="#">View All</a>
+        </div>
+
+        <div class="brand-slider">
+
+            <div class="brand-card">
+                <img src="assets/brands/apple.png" alt="">
+            </div>
+
+            <div class="brand-card">
+                <img src="assets/brands/samsung.png" alt="">
+            </div>
+
+            <div class="brand-card">
+                <img src="assets/brands/sony.png" alt="">
+            </div>
+
+            <div class="brand-card">
+                <img src="assets/brands/nike.png" alt="">
+            </div>
+
+            <div class="brand-card">
+                <img src="assets/brands/adidas.png" alt="">
+            </div>
+
+            <div class="brand-card">
+                <img src="assets/brands/xiaomi.png" alt="">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- Flash Sale -->
+    <!-- ========================= -->
+
+    <section class="products">
+
+        <div class="section-title">
+            <h2>🔥 Flash Sale</h2>
+            <a href="#">View All</a>
+        </div>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+
+                <span class="discount">-40%</span>
+
+                <img src="assets/products/product1.jpg" alt="">
+
+                <h3>Wireless Earbuds</h3>
+
+                <div class="price">
+                    <span class="new">Rs. 6,990</span>
+                    <span class="old">Rs. 11,500</span>
+                </div>
+
+                <button>Add to Cart</button>
+
+            </div>
+
+            <div class="product-card">
+
+                <span class="discount">-25%</span>
+
+                <img src="assets/products/product2.jpg" alt="">
+
+                <h3>Smart Watch</h3>
+
+                <div class="price">
+                    <span class="new">Rs. 14,990</span>
+                    <span class="old">Rs. 19,990</span>
+                </div>
+
+                <button>Add to Cart</button>
+
+            </div>
+
+            <div class="product-card">
+
+                <span class="discount">-35%</span>
+
+                <img src="assets/products/product3.jpg" alt="">
+
+                <h3>Bluetooth Speaker</h3>
+
+                <div class="price">
+                    <span class="new">Rs. 8,990</span>
+                    <span class="old">Rs. 13,500</span>
+                </div>
+
+                <button>Add to Cart</button>
+
+            </div>
+
+            <div class="product-card">
+
+                <span class="discount">-50%</span>
+
+                <img src="assets/products/product4.jpg" alt="">
+
+                <h3>Gaming Mouse</h3>
+
+                <div class="price">
+                    <span class="new">Rs. 4,990</span>
+                    <span class="old">Rs. 9,990</span>
+                </div>
+
+                <button>Add to Cart</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- Mega Sale -->
+    <!-- ========================= -->
+
+    <section class="products mega-sale">
+
+        <div class="section-title">
+            <h2>💥 Mega Sale</h2>
+            <a href="#">View All</a>
+        </div>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+
+                <span class="discount">-60%</span>
+
+                <img src="assets/products/mega1.jpg" alt="Gaming Laptop">
+
+                <h3>Gaming Laptop</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐ <span>(4.9)</span>
+                </div>
+
+                <div class="price">
+                    <span class="new">Rs. 249,990</span>
+                    <span class="old">Rs. 319,990</span>
+                </div>
+
+                <button class="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-card">
+
+                <span class="discount">-45%</span>
+
+                <img src="assets/products/mega2.jpg" alt="iPhone">
+
+                <h3>iPhone 16</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐ <span>(4.8)</span>
+                </div>
+
+                <div class="price">
+                    <span class="new">Rs. 389,990</span>
+                    <span class="old">Rs. 439,990</span>
+                </div>
+
+                <button class="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-card">
+
+                <span class="discount">-30%</span>
+
+                <img src="assets/products/mega3.jpg" alt="Smart TV">
+
+                <h3>4K Smart TV</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐ <span>(4.7)</span>
+                </div>
+
+                <div class="price">
+                    <span class="new">Rs. 154,990</span>
+                    <span class="old">Rs. 199,990</span>
+                </div>
+
+                <button class="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-card">
+
+                <span class="discount">-35%</span>
+
+                <img src="assets/products/mega4.jpg" alt="Headphones">
+
+                <h3>Wireless Headphones</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐☆ <span>(4.6)</span>
+                </div>
+
+                <div class="price">
+                    <span class="new">Rs. 18,990</span>
+                    <span class="old">Rs. 28,990</span>
+                </div>
+
+                <button class="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- Top Selling Products -->
+    <!-- ========================= -->
+
+    <section class="products top-selling">
+
+        <div class="section-title">
+            <h2>🏆 Top Selling</h2>
+            <a href="#">View All</a>
+        </div>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+
+                <img src="assets/products/top1.jpg" alt="Power Bank">
+
+                <h3>20,000mAh Power Bank</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐ <span>(4.9)</span>
+                </div>
+
+                <div class="price">
+                    <span class="new">Rs. 8,490</span>
+                </div>
+
+                <button class="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-card">
+
+                <img src="assets/products/top2.jpg" alt="Keyboard">
+
+                <h3>Mechanical Keyboard</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐ <span>(4.8)</span>
+                </div>
+
+                <div class="price">
+                    <span class="new">Rs. 12,990</span>
+                </div>
+
+                <button class="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-card">
+
+                <img src="assets/products/top3.jpg" alt="Backpack">
+
+                <h3>Travel Backpack</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐☆ <span>(4.7)</span>
+                </div>
+
+                <div class="price">
+                    <span class="new">Rs. 7,990</span>
+                </div>
+
+                <button class="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-card">
+
+                <img src="assets/products/top4.jpg" alt="Shoes">
+
+                <h3>Running Shoes</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐ <span>(4.9)</span>
+                </div>
+
+                <div class="price">
+                    <span class="new">Rs. 15,990</span>
+                </div>
+
+                <button class="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- New Arrivals -->
+    <!-- ========================= -->
+
+    <section class="products new-arrivals">
+
+        <div class="section-title">
+            <h2>🆕 New Arrivals</h2>
+            <a href="#">View All</a>
+        </div>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+
+                <span class="badge new">NEW</span>
+
+                <img src="assets/products/new1.jpg" alt="">
+
+                <h3>Wireless Gaming Mouse</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐ <span>(4.9)</span>
+                </div>
+
+                <div class="price">
+                    <span class="new-price">Rs. 6,990</span>
+                </div>
+
+                <button class="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-card">
+
+                <span class="badge new">NEW</span>
+
+                <img src="assets/products/new2.jpg" alt="">
+
+                <h3>Bluetooth Speaker</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐☆ <span>(4.8)</span>
+                </div>
+
+                <div class="price">
+                    <span class="new-price">Rs. 8,490</span>
+                </div>
+
+                <button class="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-card">
+
+                <span class="badge new">NEW</span>
+
+                <img src="assets/products/new3.jpg" alt="">
+
+                <h3>Smart Watch Pro</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+                </div>
+
+                <div class="price">
+                    <span class="new-price">Rs. 16,990</span>
+                </div>
+
+                <button class="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+            <div class="product-card">
+
+                <span class="badge new">NEW</span>
+
+                <img src="assets/products/new4.jpg" alt="">
+
+                <h3>Portable SSD 1TB</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐ <span>(4.9)</span>
+                </div>
+
+                <div class="price">
+                    <span class="new-price">Rs. 24,990</span>
+                </div>
+
+                <button class="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- Featured Products -->
+    <!-- ========================= -->
+
+    <section class="products featured-products">
+
+        <div class="section-title">
+            <h2>🌟 Featured Products</h2>
+            <a href="#">View All</a>
+        </div>
+
+        <div class="product-grid">
+
+            <div class="product-card featured">
+
+                <span class="badge featured">Featured</span>
+
+                <img src="assets/products/featured1.jpg" alt="">
+
+                <h3>Apple MacBook Air</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+                </div>
+
+                <div class="price">
+                    <span class="new-price">Rs. 389,990</span>
+                </div>
+
+                <button class="cart-btn">
+                    <i class="fa-solid fa-heart"></i>
+                    Wishlist
+                </button>
+
+            </div>
+
+            <div class="product-card featured">
+
+                <span class="badge featured">Featured</span>
+
+                <img src="assets/products/featured2.jpg" alt="">
+
+                <h3>Samsung Galaxy S25</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐ <span>(4.9)</span>
+                </div>
+
+                <div class="price">
+                    <span class="new-price">Rs. 289,990</span>
+                </div>
+
+                <button class="cart-btn">
+                    <i class="fa-solid fa-heart"></i>
+                    Wishlist
+                </button>
+
+            </div>
+
+            <div class="product-card featured">
+
+                <span class="badge featured">Featured</span>
+
+                <img src="assets/products/featured3.jpg" alt="">
+
+                <h3>Sony PlayStation 5</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐ <span>(4.9)</span>
+                </div>
+
+                <div class="price">
+                    <span class="new-price">Rs. 214,990</span>
+                </div>
+
+                <button class="cart-btn">
+                    <i class="fa-solid fa-heart"></i>
+                    Wishlist
+                </button>
+
+            </div>
+
+            <div class="product-card featured">
+
+                <span class="badge featured">Featured</span>
+
+                <img src="assets/products/featured4.jpg" alt="">
+
+                <h3>Canon DSLR Camera</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐ <span>(4.8)</span>
+                </div>
+
+                <div class="price">
+                    <span class="new-price">Rs. 189,990</span>
+                </div>
+
+                <button class="cart-btn">
+                    <i class="fa-solid fa-heart"></i>
+                    Wishlist
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- Recommended Products -->
+    <!-- ========================= -->
+
+    <section class="products recommended-products">
+
+        <div class="section-title">
+            <h2>❤️ Recommended For You</h2>
+            <a href="#">View All</a>
+        </div>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+                <img src="assets/products/recommended1.jpg" alt="">
+                <h3>Gaming Headset RGB</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐ <span>(4.9)</span>
+                </div>
+
+                <div class="price">
+                    <span class="new-price">Rs. 13,990</span>
+                </div>
+
+                <button class="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product-card">
+                <img src="assets/products/recommended2.jpg" alt="">
+                <h3>Wireless Charger</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐☆ <span>(4.7)</span>
+                </div>
+
+                <div class="price">
+                    <span class="new-price">Rs. 4,990</span>
+                </div>
+
+                <button class="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product-card">
+                <img src="assets/products/recommended3.jpg" alt="">
+                <h3>Smart Home Camera</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐ <span>(4.8)</span>
+                </div>
+
+                <div class="price">
+                    <span class="new-price">Rs. 18,990</span>
+                </div>
+
+                <button class="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product-card">
+                <img src="assets/products/recommended4.jpg" alt="">
+                <h3>Portable Projector</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐ <span>(4.9)</span>
+                </div>
+
+                <div class="price">
+                    <span class="new-price">Rs. 39,990</span>
+                </div>
+
+                <button class="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- Trending Products -->
+    <!-- ========================= -->
+
+    <section class="products trending-products">
+
+        <div class="section-title">
+            <h2>🔥 Trending Products</h2>
+            <a href="#">View All</a>
+        </div>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+                <img src="assets/products/trending1.jpg" alt="">
+                <h3>Air Fryer</h3>
+                <div class="price">
+                    <span class="new-price">Rs. 24,990</span>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="assets/products/trending2.jpg" alt="">
+                <h3>Gaming Chair</h3>
+                <div class="price">
+                    <span class="new-price">Rs. 42,990</span>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="assets/products/trending3.jpg" alt="">
+                <h3>Tablet 10.5"</h3>
+                <div class="price">
+                    <span class="new-price">Rs. 79,990</span>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="assets/products/trending4.jpg" alt="">
+                <h3>Wireless Printer</h3>
+                <div class="price">
+                    <span class="new-price">Rs. 34,990</span>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- Recently Viewed -->
+    <!-- ========================= -->
+
+    <section class="products recently-viewed">
+
+        <div class="section-title">
+            <h2>👀 Recently Viewed</h2>
+        </div>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+                <img src="assets/products/recent1.jpg" alt="">
+                <h3>USB-C Hub</h3>
+                <div class="price">
+                    <span class="new-price">Rs. 5,990</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="assets/products/recent2.jpg" alt="">
+                <h3>Office Chair</h3>
+                <div class="price">
+                    <span class="new-price">Rs. 28,990</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="assets/products/recent3.jpg" alt="">
+                <h3>Bluetooth Keyboard</h3>
+                <div class="price">
+                    <span class="new-price">Rs. 8,490</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="assets/products/recent4.jpg" alt="">
+                <h3>Coffee Machine</h3>
+                <div class="price">
+                    <span class="new-price">Rs. 19,990</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- Continue Shopping -->
+    <!-- ========================= -->
+
+    <section class="continue-shopping">
+
+        <div class="section-title">
+            <h2>🛍️ Continue Shopping</h2>
+        </div>
+
+        <div class="continue-box">
+
+            <i class="fa-solid fa-cart-arrow-down"></i>
+
+            <h3>Discover More Amazing Products</h3>
+
+            <p>
+                Thousands of products are waiting for you.
+                Continue your shopping journey with the best deals.
+            </p>
+
+            <a href="#" class="btn">
+                Continue Shopping
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- Mobile Bottom Navigation -->
+    <!-- ========================= -->
+
+    </main>
+
+    <nav class="bottom-nav">
+
+        <a href="#" class="active">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+
+        <a href="#">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>Categories</span>
+        </a>
+
+        <a href="#">
+            <i class="fa-solid fa-heart"></i>
+            <span>Wishlist</span>
+        </a>
+
+        <a href="#">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Cart</span>
+        </a>
+
+        <a href="#">
+            <i class="fa-solid fa-user"></i>
+            <span>Profile</span>
+        </a>
+
+    </nav>
+
+    <!-- ========================= -->
+    <!-- Floating Buttons -->
+    <!-- ========================= -->
+
+    <a href="#" class="live-chat-btn" title="Live Chat">
+        <i class="fa-solid fa-comments"></i>
+    </a>
+
+    <button id="scrollTopBtn" title="Back To Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- ========================= -->
+    <!-- Footer -->
+    <!-- ========================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-about">
+
+                <img src="assets/logo/logo.png" alt="Gimhan Store Logo">
+
+                <h2>Gimhan Store</h2>
+
+                <p>
+                    Your trusted online shopping destination in Sri Lanka.
+                    Discover quality products, great deals, fast delivery,
+                    and secure payments.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li><a href="#">Home</a></li>
+
+                    <li><a href="#">Categories</a></li>
+
+                    <li><a href="#">Brands</a></li>
+
+                    <li><a href="#">Flash Sale</a></li>
+
+                    <li><a href="#">Contact Us</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h3>Customer Care</h3>
+
+                <ul>
+
+                    <li><a href="#">Help Center</a></li>
+
+                    <li><a href="#">FAQ</a></li>
+
+                    <li><a href="#">Privacy Policy</a></li>
+
+                    <li><a href="#">Terms & Conditions</a></li>
+
+                    <li><a href="#">Feedback</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-social">
+
+                <h3>Follow Us</h3>
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Gimhan Store. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+</div>
+
+<!-- ========================= -->
+<!-- JavaScript -->
+<!-- ========================= -->
+
+<script src="script.js"></script>
+
+</body>
+</html>

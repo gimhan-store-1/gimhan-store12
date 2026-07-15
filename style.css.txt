@@ -1,0 +1,2330 @@
+/* =====================================================
+   GIMHAN STORE
+   style.css - Part 1
+   Theme : White + Light Green
+===================================================== */
+
+/* ===========================
+   Google Font
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===========================
+   Reset
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#ffffff;
+
+    color:#222;
+
+    overflow-x:hidden;
+
+}
+
+/* ===========================
+   Root Colors
+=========================== */
+
+:root{
+
+--primary:#55c57a;
+
+--primary-dark:#34a853;
+
+--primary-light:#dff8e7;
+
+--secondary:#f6fff8;
+
+--white:#ffffff;
+
+--black:#222222;
+
+--gray:#777777;
+
+--light-gray:#eeeeee;
+
+--shadow:0 10px 25px rgba(0,0,0,.08);
+
+--radius:18px;
+
+--transition:.35s ease;
+
+}
+
+/* ===========================
+   Scrollbar
+=========================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#f3f3f3;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:var(--primary);
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:var(--primary-dark);
+
+}
+
+/* ===========================
+   Links
+=========================== */
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+transition:var(--transition);
+
+}
+
+ul{
+
+list-style:none;
+
+}
+
+/* ===========================
+   Images
+=========================== */
+
+img{
+
+width:100%;
+
+display:block;
+
+}
+
+/* ===========================
+   Container
+=========================== */
+
+.container{
+
+width:92%;
+
+max-width:1400px;
+
+margin:auto;
+
+}
+
+/* ===========================
+   Section
+=========================== */
+
+section{
+
+padding:70px 6%;
+
+}
+
+/* ===========================
+   Section Title
+=========================== */
+
+.section-title{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:35px;
+
+}
+
+.section-title h2{
+
+font-size:2rem;
+
+font-weight:700;
+
+color:var(--black);
+
+}
+
+.section-title a{
+
+color:var(--primary);
+
+font-weight:600;
+
+}
+
+.section-title a:hover{
+
+color:var(--primary-dark);
+
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.btn{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:14px 30px;
+
+background:var(--primary);
+
+color:#fff;
+
+border-radius:50px;
+
+font-weight:600;
+
+transition:var(--transition);
+
+box-shadow:var(--shadow);
+
+}
+
+.btn:hover{
+
+background:var(--primary-dark);
+
+transform:translateY(-4px);
+
+}
+
+/* ===========================
+   Card
+=========================== */
+
+.card{
+
+background:#fff;
+
+border-radius:var(--radius);
+
+box-shadow:var(--shadow);
+
+transition:var(--transition);
+
+overflow:hidden;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+/* ===========================
+   Fade Animation
+=========================== */
+
+.fade-up{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:1s;
+
+}
+
+.fade-up.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* ===========================
+   Zoom Animation
+=========================== */
+
+.zoom{
+
+transition:.4s;
+
+}
+
+.zoom:hover{
+
+transform:scale(1.05);
+
+}
+
+/* ===========================
+   Floating Animation
+=========================== */
+
+@keyframes floating{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+.float{
+
+animation:floating 3s ease-in-out infinite;
+
+}
+
+/* ===========================
+   Pulse Animation
+=========================== */
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+.pulse{
+
+animation:pulse 2s infinite;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:992px){
+
+section{
+
+padding:60px 25px;
+
+}
+
+.section-title h2{
+
+font-size:1.6rem;
+
+}
+
+}
+
+@media(max-width:768px){
+
+section{
+
+padding:50px 20px;
+
+}
+
+.btn{
+
+width:100%;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.section-title{
+
+flex-direction:column;
+
+gap:10px;
+
+text-align:center;
+
+}
+
+.section-title h2{
+
+font-size:1.4rem;
+
+}
+
+}
+
+/* =====================================================
+   Splash Screen
+===================================================== */
+
+#splash-screen{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100vh;
+
+    background:linear-gradient(
+        135deg,
+        #ffffff,
+        #eefdf1,
+        #dff8e7
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:99999;
+
+    overflow:hidden;
+
+    transition:opacity .8s ease,
+               visibility .8s ease;
+
+}
+
+/* Hide Splash */
+
+#splash-screen.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
+
+/* ===========================
+   Splash Content
+=========================== */
+
+.splash-content{
+
+    text-align:center;
+
+    animation:splashFade 1.2s ease;
+
+}
+
+/* ===========================
+   Logo
+=========================== */
+
+.splash-content .logo{
+
+    width:140px;
+
+    height:140px;
+
+    object-fit:contain;
+
+    margin:auto;
+
+    animation:logoFloat 3s infinite ease-in-out;
+
+}
+
+/* ===========================
+   Title
+=========================== */
+
+.splash-content h1{
+
+    margin-top:25px;
+
+    font-size:2.5rem;
+
+    color:var(--primary-dark);
+
+    font-weight:700;
+
+}
+
+.splash-content p{
+
+    margin-top:12px;
+
+    color:#666;
+
+    font-size:1rem;
+
+}
+
+.splash-content span{
+
+    display:block;
+
+    margin-top:25px;
+
+    color:#999;
+
+    font-size:.85rem;
+
+}
+
+/* ===========================
+   Loader
+=========================== */
+
+.loader{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    border:6px solid #dff8e7;
+
+    border-top:6px solid var(--primary);
+
+    margin:35px auto;
+
+    animation:spin 1s linear infinite;
+
+}
+
+/* ===========================
+   Animated Background Circles
+=========================== */
+
+#splash-screen::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    border-radius:50%;
+
+    background:rgba(85,197,122,.10);
+
+    top:-120px;
+
+    left:-100px;
+
+    animation:blobOne 10s infinite alternate;
+
+}
+
+#splash-screen::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    border-radius:50%;
+
+    background:rgba(85,197,122,.12);
+
+    bottom:-120px;
+
+    right:-80px;
+
+    animation:blobTwo 9s infinite alternate;
+
+}
+
+/* ===========================
+   Keyframes
+=========================== */
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes splashFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes logoFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes blobOne{
+
+    from{
+
+        transform:translate(0,0)
+                  scale(1);
+
+    }
+
+    to{
+
+        transform:translate(60px,40px)
+                  scale(1.25);
+
+    }
+
+}
+
+@keyframes blobTwo{
+
+    from{
+
+        transform:translate(0,0)
+                  scale(1);
+
+    }
+
+    to{
+
+        transform:translate(-70px,-35px)
+                  scale(1.2);
+
+    }
+
+}
+
+/* ===========================
+   Responsive Splash
+=========================== */
+
+@media(max-width:768px){
+
+.splash-content .logo{
+
+    width:110px;
+
+    height:110px;
+
+}
+
+.splash-content h1{
+
+    font-size:2rem;
+
+}
+
+.loader{
+
+    width:55px;
+
+    height:55px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.splash-content h1{
+
+    font-size:1.7rem;
+
+}
+
+.splash-content p{
+
+    font-size:.9rem;
+
+}
+
+.loader{
+
+    width:50px;
+
+    height:50px;
+
+}
+
+}
+
+/* =====================================================
+   Onboarding Section
+   Part 2A-2.1
+===================================================== */
+
+#onboarding{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+
+    height:100vh;
+
+    background:linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #f7fff8 100%
+    );
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-direction:column;
+
+    padding:40px 25px;
+
+    z-index:9998;
+
+}
+
+/* Hide Onboarding */
+
+#onboarding.hide{
+
+    display:none;
+
+}
+
+/* ===========================
+   Slide
+=========================== */
+
+#onboarding .slide{
+
+    display:none;
+
+    width:100%;
+
+    max-width:480px;
+
+    text-align:center;
+
+    background:#ffffff;
+
+    border-radius:30px;
+
+    padding:40px 30px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+    border:1px solid rgba(85,197,122,.15);
+
+    animation:slideFade .6s ease;
+
+}
+
+#onboarding .slide.active{
+
+    display:block;
+
+}
+
+/* ===========================
+   Image
+=========================== */
+
+#onboarding .slide img{
+
+    width:240px;
+
+    max-width:100%;
+
+    margin:0 auto 30px;
+
+    animation:floatImage 3s ease-in-out infinite;
+
+}
+
+/* ===========================
+   Heading
+=========================== */
+
+#onboarding .slide h2{
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    color:var(--primary-dark);
+
+    margin-bottom:15px;
+
+}
+
+/* ===========================
+   Description
+=========================== */
+
+#onboarding .slide p{
+
+    font-size:1rem;
+
+    color:#666;
+
+    line-height:1.8;
+
+    max-width:340px;
+
+    margin:0 auto;
+
+}
+
+/* ===========================
+   Card Hover
+=========================== */
+
+#onboarding .slide:hover{
+
+    transform:translateY(-5px);
+
+    transition:.3s ease;
+
+}
+
+/* ===========================
+   Animations
+=========================== */
+
+@keyframes slideFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes floatImage{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+    #onboarding{
+
+        padding:30px 20px;
+
+    }
+
+    #onboarding .slide{
+
+        padding:30px 20px;
+
+    }
+
+    #onboarding .slide img{
+
+        width:190px;
+
+    }
+
+    #onboarding .slide h2{
+
+        font-size:1.7rem;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    #onboarding .slide{
+
+        border-radius:20px;
+
+        padding:25px 18px;
+
+    }
+
+    #onboarding .slide img{
+
+        width:150px;
+
+    }
+
+    #onboarding .slide h2{
+
+        font-size:1.5rem;
+
+    }
+
+    #onboarding .slide p{
+
+        font-size:.92rem;
+
+    }
+
+}
+
+/* =====================================================
+   Onboarding Controls & Animations
+   Part 2A-2.2
+===================================================== */
+
+/* ===========================
+   Get Started Button
+=========================== */
+
+#getStarted{
+
+    margin-top:35px;
+
+    min-width:220px;
+
+    padding:16px 35px;
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-dark)
+    );
+
+    color:#fff;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+    box-shadow:0 12px 30px rgba(85,197,122,.35);
+
+    transition:.35s ease;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+#getStarted:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 35px rgba(85,197,122,.45);
+
+}
+
+#getStarted:active{
+
+    transform:scale(.96);
+
+}
+
+/* Ripple Effect */
+
+#getStarted::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:0;
+
+    left:50%;
+
+    top:50%;
+
+    background:rgba(255,255,255,.35);
+
+    border-radius:50%;
+
+    transform:translate(-50%,-50%);
+
+    transition:.6s;
+
+}
+
+#getStarted:active::after{
+
+    width:320px;
+
+    height:320px;
+
+}
+
+/* ===========================
+   Pagination Dots
+=========================== */
+
+.onboarding-dots{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-top:25px;
+
+}
+
+.onboarding-dots span{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#cfd8d3;
+
+    transition:.35s ease;
+
+    cursor:pointer;
+
+}
+
+.onboarding-dots span.active{
+
+    width:34px;
+
+    border-radius:30px;
+
+    background:var(--primary);
+
+}
+
+/* ===========================
+   Swipe Hint
+=========================== */
+
+.swipe-hint{
+
+    margin-top:18px;
+
+    color:#888;
+
+    font-size:.9rem;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    animation:hintMove 2s infinite;
+
+}
+
+.swipe-hint i{
+
+    color:var(--primary);
+
+}
+
+/* ===========================
+   Slide Transitions
+=========================== */
+
+.slide-enter{
+
+    animation:slideIn .55s ease;
+
+}
+
+.slide-exit{
+
+    animation:slideOut .45s ease;
+
+}
+
+@keyframes slideIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+@keyframes slideOut{
+
+    from{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        opacity:0;
+
+        transform:translateX(-50px);
+
+    }
+
+}
+
+@keyframes hintMove{
+
+    0%{
+
+        transform:translateX(0);
+
+    }
+
+    50%{
+
+        transform:translateX(8px);
+
+    }
+
+    100%{
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+    #getStarted{
+
+        width:100%;
+
+        max-width:320px;
+
+    }
+
+    .onboarding-dots{
+
+        gap:8px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    #getStarted{
+
+        padding:15px 25px;
+
+        font-size:.95rem;
+
+    }
+
+    .swipe-hint{
+
+        font-size:.8rem;
+
+    }
+
+}
+
+/* =====================================================
+   Header
+   Part 2B-1
+===================================================== */
+
+header{
+
+    position:sticky;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    background:#ffffff;
+
+    z-index:1000;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
+
+    transition:.35s ease;
+
+}
+
+.header-container{
+
+    width:92%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:16px 0;
+
+}
+
+/* ===========================
+   Logo
+=========================== */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.logo img{
+
+    width:58px;
+
+    height:58px;
+
+    object-fit:contain;
+
+}
+
+.logo h1{
+
+    font-size:1.8rem;
+
+    color:var(--primary-dark);
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+}
+
+.logo span{
+
+    color:var(--primary);
+
+}
+
+/* ===========================
+   Search Area
+=========================== */
+
+.search-box{
+
+    flex:1;
+
+    max-width:700px;
+
+    position:relative;
+
+}
+
+.search-box input{
+
+    width:100%;
+
+    height:52px;
+
+    border:2px solid #e5f6ea;
+
+    border-radius:50px;
+
+    padding:0 60px 0 20px;
+
+    background:#f8fff9;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.35s ease;
+
+}
+
+.search-box input:focus{
+
+    border-color:var(--primary);
+
+    background:#ffffff;
+
+    box-shadow:0 0 0 5px rgba(85,197,122,.12);
+
+}
+
+.search-box button{
+
+    position:absolute;
+
+    right:6px;
+
+    top:6px;
+
+    width:40px;
+
+    height:40px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+
+}
+
+.search-box button:hover{
+
+    background:var(--primary-dark);
+
+    transform:scale(1.08);
+
+}
+
+/* ===========================
+   Header Right
+=========================== */
+
+.header-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+/* ===========================
+   Icon Buttons
+=========================== */
+
+.icon-btn{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#f4fff5;
+
+    color:var(--primary-dark);
+
+    cursor:pointer;
+
+    transition:.35s ease;
+
+    position:relative;
+
+}
+
+.icon-btn:hover{
+
+    background:var(--primary);
+
+    color:#ffffff;
+
+    transform:translateY(-3px);
+
+}
+
+/* Badge */
+
+.icon-btn .badge{
+
+    position:absolute;
+
+    top:-4px;
+
+    right:-2px;
+
+    width:20px;
+
+    height:20px;
+
+    border-radius:50%;
+
+    background:#ff4d4d;
+
+    color:#fff;
+
+    font-size:11px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:600;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:992px){
+
+.header-container{
+
+    flex-wrap:wrap;
+
+}
+
+.search-box{
+
+    order:3;
+
+    width:100%;
+
+    max-width:100%;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.logo h1{
+
+    font-size:1.4rem;
+
+}
+
+.logo img{
+
+    width:46px;
+
+    height:46px;
+
+}
+
+.search-box input{
+
+    height:48px;
+
+}
+
+.header-right{
+
+    gap:10px;
+
+}
+
+.icon-btn{
+
+    width:42px;
+
+    height:42px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.header-container{
+
+    width:95%;
+
+}
+
+.logo h1{
+
+    display:none;
+
+}
+
+.search-box input{
+
+    font-size:14px;
+
+}
+
+}
+
+/* =====================================================
+   Navigation & Header Icons
+   Part 2B-2
+===================================================== */
+
+/* ===========================
+   Navigation
+=========================== */
+
+.navbar{
+
+    width:100%;
+
+    background:var(--white);
+
+    border-top:1px solid #eef6f0;
+
+    border-bottom:1px solid #eef6f0;
+
+}
+
+.nav-container{
+
+    width:92%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.nav-menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:28px;
+
+}
+
+.nav-menu li{
+
+    position:relative;
+
+}
+
+.nav-menu li a{
+
+    display:block;
+
+    padding:18px 0;
+
+    color:var(--black);
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:var(--transition);
+
+}
+
+.nav-menu li a:hover{
+
+    color:var(--primary);
+
+}
+
+.nav-menu li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:0;
+
+    height:3px;
+
+    border-radius:10px;
+
+    background:var(--primary);
+
+    transition:.35s ease;
+
+}
+
+.nav-menu li:hover a::after{
+
+    width:100%;
+
+}
+
+/* ===========================
+   Active Menu
+=========================== */
+
+.nav-menu li.active a{
+
+    color:var(--primary-dark);
+
+    font-weight:600;
+
+}
+
+.nav-menu li.active a::after{
+
+    width:100%;
+
+}
+
+/* ===========================
+   Dropdown
+=========================== */
+
+.dropdown{
+
+    position:absolute;
+
+    top:100%;
+
+    left:0;
+
+    min-width:220px;
+
+    background:#fff;
+
+    border-radius:16px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.10);
+
+    padding:12px 0;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(15px);
+
+    transition:.35s ease;
+
+    z-index:1000;
+
+}
+
+.nav-menu li:hover .dropdown{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+.dropdown a{
+
+    display:block;
+
+    padding:12px 20px !important;
+
+    font-size:14px;
+
+}
+
+.dropdown a:hover{
+
+    background:var(--primary-light);
+
+    color:var(--primary-dark);
+
+}
+
+/* ===========================
+   Notification Animation
+=========================== */
+
+@keyframes bellShake{
+
+    0%{transform:rotate(0deg);}
+
+    20%{transform:rotate(15deg);}
+
+    40%{transform:rotate(-15deg);}
+
+    60%{transform:rotate(10deg);}
+
+    80%{transform:rotate(-10deg);}
+
+    100%{transform:rotate(0deg);}
+
+}
+
+.notification-icon:hover i{
+
+    animation:bellShake .6s;
+
+}
+
+/* ===========================
+   Cart Animation
+=========================== */
+
+@keyframes cartBounce{
+
+    0%{transform:scale(1);}
+
+    30%{transform:scale(1.2);}
+
+    60%{transform:scale(.95);}
+
+    100%{transform:scale(1);}
+
+}
+
+.cart-icon:hover{
+
+    animation:cartBounce .45s;
+
+}
+
+/* ===========================
+   Message Icon
+=========================== */
+
+.message-icon:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* ===========================
+   Glass Effect
+=========================== */
+
+.glass{
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+}
+
+/* ===========================
+   Sticky Header Effect
+=========================== */
+
+header.scrolled{
+
+    padding:0;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+/* ===========================
+   Responsive Navigation
+=========================== */
+
+@media(max-width:992px){
+
+.nav-container{
+
+    overflow-x:auto;
+
+}
+
+.nav-menu{
+
+    gap:20px;
+
+    white-space:nowrap;
+
+    padding:0 10px;
+
+}
+
+.nav-menu::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.nav-menu li a{
+
+    padding:15px 0;
+
+    font-size:14px;
+
+}
+
+.dropdown{
+
+    display:none;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.nav-menu{
+
+    gap:16px;
+
+}
+
+.nav-menu li a{
+
+    font-size:13px;
+
+}
+
+}
+
+
+/* =====================================================
+   Mobile Menu & Responsive Header
+   Part 2B-3
+===================================================== */
+
+/* ===========================
+   Mobile Menu Button
+=========================== */
+
+.menu-toggle{
+
+    display:none;
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    outline:none;
+
+    background:var(--primary-light);
+
+    color:var(--primary-dark);
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.menu-toggle:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    transform:scale(1.05);
+
+}
+
+/* ===========================
+   Mobile Sidebar
+=========================== */
+
+.mobile-menu{
+
+    position:fixed;
+
+    top:0;
+
+    left:-320px;
+
+    width:300px;
+
+    height:100vh;
+
+    background:#fff;
+
+    box-shadow:5px 0 30px rgba(0,0,0,.15);
+
+    z-index:9999;
+
+    overflow-y:auto;
+
+    transition:left .4s ease;
+
+}
+
+.mobile-menu.active{
+
+    left:0;
+
+}
+
+/* ===========================
+   Mobile Header
+=========================== */
+
+.mobile-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.mobile-header h2{
+
+    font-size:20px;
+
+    font-weight:600;
+
+}
+
+.close-menu{
+
+    background:none;
+
+    border:none;
+
+    color:#fff;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+}
+
+/* ===========================
+   Mobile Links
+=========================== */
+
+.mobile-menu ul{
+
+    padding:20px;
+
+}
+
+.mobile-menu ul li{
+
+    margin-bottom:10px;
+
+}
+
+.mobile-menu ul li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:14px 16px;
+
+    border-radius:12px;
+
+    color:#333;
+
+    font-weight:500;
+
+    transition:.3s ease;
+
+}
+
+.mobile-menu ul li a:hover{
+
+    background:var(--primary-light);
+
+    color:var(--primary-dark);
+
+    transform:translateX(6px);
+
+}
+
+/* ===========================
+   Overlay
+=========================== */
+
+.menu-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s ease;
+
+    z-index:9998;
+
+}
+
+.menu-overlay.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/* ===========================
+   Mobile Search
+=========================== */
+
+.mobile-search{
+
+    display:none;
+
+    width:100%;
+
+    padding:15px;
+
+    background:#fff;
+
+    border-top:1px solid #eee;
+
+}
+
+.mobile-search input{
+
+    width:100%;
+
+    padding:14px 18px;
+
+    border:2px solid var(--primary-light);
+
+    border-radius:40px;
+
+    outline:none;
+
+    font-size:15px;
+
+}
+
+.mobile-search input:focus{
+
+    border-color:var(--primary);
+
+}
+
+/* ===========================
+   Bottom Navigation
+=========================== */
+
+.bottom-nav{
+
+    position:fixed;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    background:#fff;
+
+    display:none;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    padding:10px 0;
+
+    box-shadow:0 -5px 20px rgba(0,0,0,.08);
+
+    z-index:999;
+
+}
+
+.bottom-nav a{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:4px;
+
+    color:#666;
+
+    font-size:13px;
+
+    transition:.3s ease;
+
+}
+
+.bottom-nav a i{
+
+    font-size:20px;
+
+}
+
+.bottom-nav a.active,
+
+.bottom-nav a:hover{
+
+    color:var(--primary);
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:992px){
+
+.menu-toggle{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.navbar{
+
+    display:none;
+
+}
+
+.mobile-search{
+
+    display:block;
+
+}
+
+.bottom-nav{
+
+    display:flex;
+
+}
+
+body{
+
+    padding-bottom:75px;
+
+}
+
+.header-container{
+
+    gap:12px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.mobile-menu{
+
+    width:280px;
+
+}
+
+.mobile-header h2{
+
+    font-size:18px;
+
+}
+
+.bottom-nav a{
+
+    font-size:11px;
+
+}
+
+.bottom-nav a i{
+
+    font-size:18px;
+
+}
+
+}
